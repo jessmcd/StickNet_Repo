@@ -1,0 +1,1 @@
+filename, row, T, meanT, RH, meanRH, P, meanP WS, meanWS, TFLAG(1=bad), WFLAG(1=bad)

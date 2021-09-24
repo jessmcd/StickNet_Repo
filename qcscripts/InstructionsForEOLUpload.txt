@@ -1,0 +1,34 @@
+INSTRUCTIONS FOR UPLOADING STICKNET DATA TO EOL
+--------------------
+Valid as of July 2020. Written by Jessica McDonald.
+--------------------
+
+
+Note: anything proceeding ">>" should be typed into the terminal. 
+--------------------
+
+EOL CONTACT (as of 2020) - Scot Loeher loehrer@ucar.edu
+
+***************
+QCing the data:
+    1. follow instructions in QC_sticknet_data_for_EOL_1.ipynb
+    2. follow instructions in Format_sticknet_data_for_EOL_2.ipynb
+    
+***************
+Prepping the data:
+    1. Put all data into a directory. Delete all empty files!
+    2. Put data directory and README document into same directory and zip
+    
+***************
+Uploading the data:
+    1. cd into the directory with the zip file. You CANNOT upload the data using a filepath, it must only be the name of the zip file => NO: >> put /path/file.zip, YES: >> put file.zip
+    2. ftp into the eol server (>> ftp ftp.eol.ucar.edu)
+    3. enter username/password as given (they will email you this information, otherwise it is likely "anonymous" for the username with no password)
+    4. cd into the correct directory (probably pub/data/incoming/vortex-se. Then cd into the TTU directory (confirm with EOL contact first).
+    5. >> passive (put into passive mode) IMPORTANT
+    6. >> binary (put into binary mode) IMPORTANT
+    7. >> put file.zip .
+    8. You should get the output "150 Ok to send data." Once the data has uploaded (be patient), email the EOL contact with filename and name/description of contents. If there are any issues, the EOL contact will let you know.
+    9. Enjoy a nice beverage of your choice. Congrats!
+    
+------------------------------------------------------------
