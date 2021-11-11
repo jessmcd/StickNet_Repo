@@ -272,7 +272,12 @@ def plot_meteogram(met, probe_id, savedir):
     # save figure 
     obtime = parse_currtime()[1] # note that this may be different from last time on plot
                                  # THATS OKAY... it will make data drops more apparent!
-    plt.savefig('{0}{1}_meteogram_{2}.png'.format(savedir,probe_id,obtime),dpi=300,bbox_inches = 'tight')
+    #plt.savefig('{0}{1}_meteogram_{2}.png'.format(savedir,probe_id,obtime),dpi=300,bbox_inches = 'tight')
+    
+    # don't include obtime, because the meteograms get overwritten each time 
+    # they'll get put in a separate directory for each day
+    plt.savefig('{0}{1}_meteogram.png'.format(savedir,probe_id,obtime),dpi=300,bbox_inches = 'tight')
+    
     plt.close()
     
     

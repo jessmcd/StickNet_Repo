@@ -201,7 +201,7 @@ def plot_oban(lats, lons, variable, u,v, levels=[], cmap='viridis',
     # save figure 
     nametime = parse_currtime()[1] # note that this may be different from last time on plot
                                  # THATS OKAY... it will make data drops more apparent!
-    plt.savefig('{0}/{1}_oban_{2}.png'.format(savedir,name,nametime),dpi=300,bbox_inches = 'tight')
+    plt.savefig('{0}/oban_{1}_{2}.png'.format(savedir,name,nametime),dpi=300,bbox_inches = 'tight')
     plt.close()
 
 # get data

@@ -15,8 +15,9 @@ from info import probe_locs
 import datetime as dt
 
 
-endtime = dt.datetime(2017,4,30,19,9) #dt.datetime.utcnow()
+endtime = dt.datetime(2017,5,1) #dt.datetime.utcnow()
 starttime = endtime - dt.timedelta(hours=24)
+
 
 probes = list(probe_locs.keys())[0:3]
 

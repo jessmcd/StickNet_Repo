@@ -134,16 +134,14 @@ def write_to_html(html,filedir, probe_id, endtime, d):
     WD = get_winddir_string(d['WD'].values)
     batt = d['BATT'].values[0]
     MSLP = np.round(calc_mslp(d['T'].values,d['P'].values,d['Elevation'].values),1)[0]
-    city = probe_locs[probe_id][4]
-    id_name = probe_locs[probe_id][3]
     time = sn_data.datetime
 
-    text1 = f'{city},{id_name},{probe_id},{time},{T},{Td},{RH},{WS},{WD},{WSgust:4.1f},'
+    text1 = f'{probe_id},{time},{T},{Td},{RH},{WS},{WD},{WSgust:4.1f},'
     text2 = f'{Tmax},{Tmin},{WSgustmax:4.1f},{wsindx},{batt},{MSLP}'
-    text = text1+text2
+    text = text1+text2+'\n'
 
-    print(text)
-    #html.write(text)
+    #print(text)
+    html.write(text)
 
     
 def get_sticknet_data(starttime, endtime, probes=[], dataset="subset",

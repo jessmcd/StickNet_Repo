@@ -21,3 +21,7 @@
   
   Everything else is basic python (numpy, matplotlib, math, etc. ) 
   
+
+
+### Other Info:
+  All the .ipynb scripts are for testing purposes. The .py scripts are considered the final production code. Do not do any major     changes to the .py scripts without testing in the .ipynb scripts first!

@@ -44,7 +44,7 @@ states_provinces = cfeature.NaturalEarthFeature(
 
 # create the station plot and write to html
 
-endtime = dt.datetime(2017,4,30,19,9) #dt.datetime.utcnow()
+endtime = dt.datetime(2017,4,30,19,20) #dt.datetime.utcnow()
 starttime = endtime 
 
 # find all active StickNets
@@ -52,13 +52,12 @@ probes = list(probe_locs.keys())
 
 
 # open (create) html file for writing
-# html_filepath = '/Users/severe/Research/VORTEXSE/data.csv'
-# html_file = open(html_filepath,'w')
+html_filepath = savedir+'data.csv'
+html_file = open(html_filepath,'w')
 
 # write to html AND gret the data we want to plot
 # probe ID, date, pressure, temperature, wind speed, wind direction, relative humidity,
-data_df = snmods.get_sticknet_data(starttime,endtime, dataset='latest',probes=probes)
-         #,html=html_file)
+data_df = snmods.get_sticknet_data(starttime,endtime, dataset='latest',probes=probes, html=html_file)
     
 if not data_df.empty: # only works if you have data
 
